@@ -1,1 +1,878 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lucas Monteiro Mendes — Direito Público com Propósito</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+      --bg:#070707;
+      --bg2:#111111;
+      --card:#141414;
+      --pink:#ff4fa3;
+      --pink2:#ff7dc2;
+      --purple:#7a2cff;
+      --text:#f5f5f5;
+      --muted:#b8b8b8;
+      --line:rgba(255,255,255,0.08);
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Inter', sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:100%;
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 32px;
+    }
+
+    /* NAV */
+
+    nav{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(20px);
+      background:rgba(7,7,7,0.75);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav-wrapper{
+      height:82px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:-0.5px;
+    }
+
+    .logo span{
+      color:var(--pink);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:32px;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:#d6d6d6;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:var(--pink);
+    }
+
+    .btn{
+      background:linear-gradient(135deg,var(--pink),var(--purple));
+      padding:14px 22px;
+      border-radius:14px;
+      font-weight:700;
+      transition:0.3s;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      box-shadow:0 10px 30px rgba(255,79,163,0.25);
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      background:
+      radial-gradient(circle at top left, rgba(122,44,255,0.25), transparent 35%),
+      radial-gradient(circle at right, rgba(255,79,163,0.25), transparent 30%),
+      linear-gradient(to bottom,#080808,#050505);
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:900px;
+      height:900px;
+      background:radial-gradient(circle,var(--pink),transparent 65%);
+      opacity:0.08;
+      right:-300px;
+      top:-250px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      align-items:center;
+      gap:40px;
+      padding-top:120px;
+      padding-bottom:80px;
+    }
+
+    .tag{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:10px 16px;
+      border-radius:999px;
+      margin-bottom:24px;
+      color:#d9d9d9;
+      font-size:14px;
+    }
+
+    .hero h1{
+      font-family:'Playfair Display', serif;
+      font-size:82px;
+      line-height:0.96;
+      margin-bottom:28px;
+      letter-spacing:-2px;
+    }
+
+    .hero h1 span{
+      color:var(--pink);
+    }
+
+    .hero p{
+      font-size:20px;
+      line-height:1.8;
+      color:var(--muted);
+      max-width:720px;
+      margin-bottom:36px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,0.1);
+      background:transparent;
+      padding:14px 22px;
+      border-radius:14px;
+      transition:0.3s;
+      color:#fff;
+      font-weight:600;
+    }
+
+    .btn-secondary:hover{
+      border-color:var(--pink);
+      color:var(--pink);
+    }
+
+    .hero-image{
+      position:relative;
+    }
+
+    .hero-image img{
+      border-radius:32px;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:
+      0 40px 80px rgba(0,0,0,0.45),
+      0 0 100px rgba(255,79,163,0.18);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:120px 0;
+    }
+
+    .section-title{
+      margin-bottom:60px;
+      max-width:850px;
+    }
+
+    .section-title span{
+      color:var(--pink);
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-size:14px;
+    }
+
+    .section-title h2{
+      font-family:'Playfair Display', serif;
+      font-size:58px;
+      line-height:1.05;
+      margin-top:18px;
+      margin-bottom:24px;
+    }
+
+    .section-title p{
+      color:var(--muted);
+      line-height:1.9;
+      font-size:18px;
+    }
+
+    /* MANIFESTO */
+
+    .manifesto{
+      background:linear-gradient(to bottom,#090909,#0f0f0f);
+    }
+
+    .manifesto-box{
+      background:linear-gradient(145deg, rgba(255,79,163,0.07), rgba(122,44,255,0.08));
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:30px;
+      padding:70px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .manifesto-box::after{
+      content:"";
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:radial-gradient(circle,var(--pink),transparent 70%);
+      opacity:0.08;
+      top:-120px;
+      right:-120px;
+    }
+
+    .manifesto-box h3{
+      font-family:'Playfair Display', serif;
+      font-size:46px;
+      margin-bottom:24px;
+      line-height:1.1;
+    }
+
+    .manifesto-box p{
+      color:#d4d4d4;
+      font-size:19px;
+      line-height:1.9;
+      max-width:900px;
+    }
+
+    /* CARDS */
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:32px;
+      border-radius:24px;
+      transition:0.4s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      background:radial-gradient(circle,var(--pink),transparent 70%);
+      opacity:0;
+      transition:0.5s;
+      right:-60px;
+      top:-60px;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(255,79,163,0.35);
+    }
+
+    .card:hover::before{
+      opacity:0.12;
+    }
+
+    .card h3{
+      margin-bottom:18px;
+      font-size:24px;
+    }
+
+    .card p{
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    /* PODCAST */
+
+    .podcast{
+      background:
+      radial-gradient(circle at left, rgba(255,79,163,0.12), transparent 25%),
+      radial-gradient(circle at right, rgba(122,44,255,0.15), transparent 30%),
+      #0b0b0b;
+    }
+
+    .podcast-grid{
+      display:grid;
+      grid-template-columns:0.95fr 1.05fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .podcast-image img{
+      border-radius:30px;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 25px 70px rgba(255,79,163,0.2);
+    }
+
+    .episodes{
+      display:grid;
+      gap:18px;
+      margin-top:36px;
+    }
+
+    .episode{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:22px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .episode:hover{
+      border-color:rgba(255,79,163,0.3);
+      transform:translateX(8px);
+    }
+
+    .episode small{
+      color:var(--pink2);
+      font-weight:700;
+      display:block;
+      margin-bottom:8px;
+    }
+
+    .episode h4{
+      margin-bottom:10px;
+      font-size:20px;
+    }
+
+    .episode p{
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    /* INSIGHTS */
+
+    .insights-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:24px;
+    }
+
+    .insight{
+      background:#101010;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .insight-content{
+      padding:28px;
+    }
+
+    .insight span{
+      color:var(--pink);
+      font-size:13px;
+      text-transform:uppercase;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .insight h3{
+      margin:18px 0;
+      font-size:28px;
+      line-height:1.2;
+    }
+
+    .insight p{
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    /* CTA */
+
+    .cta{
+      text-align:center;
+      background:
+      radial-gradient(circle at center, rgba(255,79,163,0.15), transparent 30%),
+      #080808;
+    }
+
+    .cta h2{
+      font-family:'Playfair Display', serif;
+      font-size:64px;
+      line-height:1;
+      margin-bottom:24px;
+    }
+
+    .cta p{
+      max-width:760px;
+      margin:0 auto 36px;
+      color:var(--muted);
+      line-height:1.9;
+      font-size:18px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      border-top:1px solid rgba(255,255,255,0.06);
+      padding:40px 0;
+      background:#050505;
+    }
+
+    .footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer p{
+      color:#9f9f9f;
+      line-height:1.7;
+    }
+
+    .social{
+      display:flex;
+      gap:16px;
+    }
+
+    .social a{
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      background:#121212;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(255,255,255,0.06);
+      transition:0.3s;
+    }
+
+    .social a:hover{
+      border-color:var(--pink);
+      color:var(--pink);
+      transform:translateY(-3px);
+    }
+
+    @media(max-width:980px){
+
+      .hero-grid,
+      .podcast-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:58px;
+      }
+
+      .section-title h2{
+        font-size:44px;
+      }
+
+      .cta h2{
+        font-size:48px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .manifesto-box{
+        padding:42px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+    <div class="container nav-wrapper">
+
+      <div class="logo">
+        Lucas<span>.</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#manifesto">Manifesto</a>
+        <a href="#atuacao">Atuação</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#insights">Conteúdo</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="tag">
+          ⚖ Direito Público • Comunicação • Democracia
+        </div>
+
+        <h1>
+          Direito Público <br>
+          com <span>propósito.</span>
+        </h1>
+
+        <p>
+          Advocacia estratégica, educação jurídica e comunicação pública para transformar conhecimento técnico em impacto coletivo.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#contato" class="btn">
+            Fale comigo
+          </a>
+
+          <a href="#podcast" class="btn-secondary">
+            Ouvir podcast
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+        <img src="CAPA-PRINCIPAL.jpg" alt="Lucas Monteiro Mendes">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MANIFESTO -->
+
+  <section class="manifesto" id="manifesto">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>Manifesto</span>
+        <h2>
+          O Direito precisa voltar a dialogar com as pessoas.
+        </h2>
+      </div>
+
+      <div class="manifesto-box">
+
+        <h3>
+          Conhecimento que informa. Comunicação que transforma.
+        </h3>
+
+        <p>
+          O Direito não deve existir apenas para quem domina a linguagem técnica.
+          Meu trabalho conecta instituições, cidadania, educação e comunicação pública através de uma advocacia contemporânea, acessível e estratégica.
+          Mais do que produzir teses jurídicas, acredito na construção de pontes entre conhecimento, impacto social e transformação coletiva.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ÁREAS -->
+
+  <section id="atuacao">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>Atuação</span>
+
+        <h2>
+          Estratégia jurídica com visão institucional e impacto público.
+        </h2>
+
+        <p>
+          Atuação focada em Direito Público, transparência, controle, licitações e construção de soluções jurídicas contemporâneas.
+        </p>
+
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Direito Público</h3>
+          <p>
+            Atuação estratégica em relações administrativas, institucionais e governamentais.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Licitações</h3>
+          <p>
+            Consultoria especializada com foco na Lei nº 14.133/2021 e governança contratual.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Controle & Transparência</h3>
+          <p>
+            Estruturação de soluções voltadas à integridade pública, accountability e conformidade.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Educação Jurídica</h3>
+          <p>
+            Produção de conteúdo, formação técnica e democratização do conhecimento jurídico.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PODCAST -->
+
+  <section class="podcast" id="podcast">
+
+    <div class="container podcast-grid">
+
+      <div class="podcast-image">
+        <img src="XICRINHA.jpg" alt="Podcast Xicrinha">
+      </div>
+
+      <div>
+
+        <div class="section-title">
+          <span>Podcast</span>
+
+          <h2>
+            Xicrinha — conhecer é poder.
+          </h2>
+
+          <p>
+            Um espaço para conversas reais sobre Direito, política, cultura, tecnologia, comportamento e temas que moldam a sociedade contemporânea.
+          </p>
+        </div>
+
+        <div class="episodes">
+
+          <div class="episode">
+            <small>EPISÓDIO #01</small>
+            <h4>O Direito precisa ser acessível?</h4>
+            <p>
+              Como a linguagem técnica afasta pessoas das instituições públicas.
+            </p>
+          </div>
+
+          <div class="episode">
+            <small>EPISÓDIO #02</small>
+            <h4>IA, advocacia e transformação digital</h4>
+            <p>
+              O impacto da inteligência artificial no exercício da advocacia contemporânea.
+            </p>
+          </div>
+
+          <div class="episode">
+            <small>EPISÓDIO #03</small>
+            <h4>Democracia, comunicação e poder</h4>
+            <p>
+              O papel da informação pública na construção democrática.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- INSIGHTS -->
+
+  <section id="insights">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>Ideias</span>
+
+        <h2>
+          Reflexões para além do jurídico.
+        </h2>
+
+        <p>
+          Conteúdo autoral sobre Direito, tecnologia, democracia, cultura, comunicação pública e transformação institucional.
+        </p>
+
+      </div>
+
+      <div class="insights-grid">
+
+        <div class="insight">
+
+          <div class="insight-content">
+
+            <span>Comunicação Pública</span>
+
+            <h3>
+              A linguagem técnica como barreira democrática.
+            </h3>
+
+            <p>
+              Instituições não podem depender de inacessibilidade para preservar autoridade.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="insight">
+
+          <div class="insight-content">
+
+            <span>Tecnologia</span>
+
+            <h3>
+              O futuro da advocacia será híbrido.
+            </h3>
+
+            <p>
+              Técnica jurídica, inteligência artificial e comunicação estratégica caminharão juntas.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="insight">
+
+          <div class="insight-content">
+
+            <span>Democracia</span>
+
+            <h3>
+              Conhecimento é ferramenta de emancipação social.
+            </h3>
+
+            <p>
+              Democratizar informação fortalece cidadania, controle social e participação política.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta" id="contato">
+
+    <div class="container">
+
+      <h2>
+        Vamos descomplicar o que parece impossível.
+      </h2>
+
+      <p>
+        Consultoria jurídica, projetos institucionais, comunicação pública, conteúdo e parcerias estratégicas.
+      </p>
+
+      <a href="mailto:contato@lucasmonteiromendes.com.br" class="btn">
+        Entrar em contato
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer">
+
+      <div>
+        <div class="logo">
+          Lucas<span>.</span>
+        </div>
+
+        <p style="margin-top:14px;">
+          Democratizar conhecimento é fortalecer cidadania.
+        </p>
+      </div>
+
+      <div class="social">
+        <a href="#">IG</a>
+        <a href="#">YT</a>
+        <a href="#">IN</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
