@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
 
   <title>LMM - Advogado - Online - Atendimento - Consulta - Rápida</title>
-  <meta name="description" content="Lucas Monteiro Mendes — Advogado especialista em Direito Público, Criminal e Administrativo. MBA em Gestão Pública. Podcast Xicrinha. Belo Horizonte e Região Metropolitana - MG. Atendimento online em todo o Brasil.">
+  <meta name="description" content="Lucas Monteiro Mendes - Advogado especialista em Direito Público, Criminal e Administrativo. MBA em Gestão Pública. Podcast Xicrinha. Belo Horizonte e Região Metropolitana - MG. Atendimento online em todo o Brasil.">
   <meta name="keywords" content="Lucas Monteiro Mendes, advogado, Direito Público, Direito Administrativo, Direito Criminal">
   <meta name="author" content="Lucas Monteiro Mendes">
   <link rel="canonical" href="https://lucasmonteiromendes.com.br/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Lucas Monteiro Mendes — Advogado | Direito com Propósito">
-  <meta property="og:description" content="Justiça que informa. Conhecimento que transforma. Especialista em Direito Público, Criminal e Administrativo. Podcast Xicrinha.">
+  <meta property="og:title" content="Lucas Monteiro Mendes - Advogado | Direito com Propósito">
+  <meta property="og:description" content="Justiça que informa. Conhecimento que transforma. Advogado criminal e administrativo. MBA em Gestão Pública. Podcast Xicrinha.">
   <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmsCys3cZJOq7J64IdHV1XLz_nMGaFM-iXjHLK7w8EfzPRqjImsQ2mKzrYJZtqeEJQ5lzfe25G_16PZrHUfZzedjInSepAgzKJ3O54lD3uxzUblR_2A4DRwUux82GEqFqQ4qP4Zvlbi_BHSlzdD-PUqnq3XzjuX7kiAnRP__N_WohiL6Xo5oUw0I9b7OAz/s1600/LucasPink.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lucas Monteiro Mendes — Advogado | Direito com Propósito">
+  <meta name="twitter:title" content="Lucas Monteiro Mendes - Advogado | Direito com Propósito">
   <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmsCys3cZJOq7J64IdHV1XLz_nMGaFM-iXjHLK7w8EfzPRqjImsQ2mKzrYJZtqeEJQ5lzfe25G_16PZrHUfZzedjInSepAgzKJ3O54lD3uxzUblR_2A4DRwUux82GEqFqQ4qP4Zvlbi_BHSlzdD-PUqnq3XzjuX7kiAnRP__N_WohiL6Xo5oUw0I9b7OAz/s1600/LucasPink.png">
 
   <!-- Schema.org -->
@@ -30,7 +30,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Lucas Monteiro Mendes",
-    "jobTitle": "Advogado — Direito Público e Criminal",
+    "jobTitle": "Advogado",
     "url": "https://lucasmonteiromendes.com.br",
     "email": ["lucasmonteiromendes@outlook.com", "lucasmonteiromendes@gmail.com"],
     "telephone": "+55-31-99152-8642",
@@ -39,7 +39,7 @@
   }
   </script>
 
-  <link rel="icon" type="image/x-icon" href="https://github.com/lucassmmendes.github.io/xicara.ico">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23141414'/%3E%3Cpath d='M32 10 L28 18 L36 18 Z' fill='%23ff4fa3'/%3E%3Cline x1='32' y1='18' x2='32' y2='42' stroke='%23ff7dc2' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M20 42 L44 42 L48 54 L16 54 Z' fill='%23ff4fa3' opacity='0.9'/%3E%3Ctext x='32' y='51' font-size='14' font-family='Arial' font-weight='bold' fill='%23141414' text-anchor='middle'%3ELM%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -234,6 +234,16 @@
       color: var(--text);
     }
     .btn-secondary:hover { border-color: var(--pink); color: var(--pink); }
+    .contact-info {
+      margin-top: 20px;
+      font-size: 14px;
+      color: var(--pink);
+      background: rgba(255,79,163,0.1);
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 40px;
+      backdrop-filter: blur(4px);
+    }
 
     .hero-image {
       position: relative;
@@ -290,41 +300,109 @@
     }
     .manifesto-box p { color: var(--muted); font-size: 16px; line-height: 1.7; }
 
-    /* Cards atuação */
+    /* FILTROS - Áreas de Atuação como filtros */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
     }
     .card {
       background: var(--card);
       border: 1px solid var(--line);
-      padding: 24px;
-      border-radius: 18px;
+      padding: 28px;
+      border-radius: 20px;
       transition: 0.3s;
+      cursor: pointer;
     }
-    .card:hover { transform: translateY(-4px); border-color: rgba(255,79,163,0.35); }
-    .card h3 { margin-bottom: 10px; font-size: 18px; }
-    .card p { color: var(--muted); line-height: 1.6; font-size: 13px; }
+    .card:hover { transform: translateY(-6px); border-color: rgba(255,79,163,0.5); }
+    .card h3 { margin-bottom: 12px; font-size: 20px; color: var(--pink); }
+    .card p { color: var(--muted); line-height: 1.6; font-size: 14px; }
+    .card small { display: block; margin-top: 16px; font-size: 12px; color: var(--pink2); opacity: 0.7; }
+
+    /* Subáreas (Especificidades) */
+    .subareas-titulo {
+      text-align: center;
+      margin: 20px 0 16px;
+      font-size: 28px;
+      font-family: 'Playfair Display', serif;
+      color: var(--pink);
+    }
+    .subareas-subtitulo {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+    .subareas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .subarea-item {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .subarea-item:hover {
+      border-color: var(--pink);
+      transform: translateX(5px);
+      background: rgba(255,79,163,0.05);
+    }
+    .subarea-item::before {
+      content: "⚖️";
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    /* Links úteis */
+    .links-uteis-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+    .link-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 16px 24px;
+      text-align: center;
+      transition: 0.2s;
+      flex: 1 1 200px;
+    }
+    .link-card a {
+      font-weight: 600;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--pink);
+    }
+    .link-card a:hover {
+      text-decoration: underline;
+    }
 
     /* Currículo */
     .curriculo-section { 
       background: var(--bg-secondary); 
       padding: 60px 0;
     }
-
     .curriculo-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
-
-    .curriculo-col {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
+    .curriculo-col { display: flex; flex-direction: column; gap: 20px; }
     .curriculo-card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -332,11 +410,7 @@
       padding: 18px 22px;
       transition: 0.3s;
     }
-
-    .curriculo-card:hover {
-      border-color: rgba(255, 79, 163, 0.3);
-    }
-
+    .curriculo-card:hover { border-color: rgba(255, 79, 163, 0.3); }
     .card-header {
       font-size: 11px;
       font-weight: 700;
@@ -347,7 +421,6 @@
       padding-bottom: 6px;
       border-bottom: 1px solid var(--line);
     }
-
     .curriculo-item {
       display: flex;
       gap: 12px;
@@ -355,104 +428,20 @@
       padding-bottom: 12px;
       border-bottom: 1px solid var(--line);
     }
-
-    .curriculo-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-    .item-year {
-      min-width: 90px;
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--pink2);
-      line-height: 1.4;
-    }
-
-    .curriculo-item strong {
-      display: block;
-      font-size: 13px;
-      margin-bottom: 3px;
-      color: var(--text);
-    }
-
-    .item-place {
-      display: block;
-      font-size: 11px;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .item-desc {
-      display: block;
-      font-size: 10px;
-      color: #9a9a9a;
-      line-height: 1.5;
-    }
-
-    .competencias-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-    }
-
-    .competencia-item {
-      background: rgba(255, 79, 163, 0.08);
-      border-radius: 8px;
-      padding: 6px 10px;
-      font-size: 11px;
-      color: var(--text);
-      transition: 0.2s;
-    }
-
-    .competencia-item:hover {
-      background: rgba(255, 79, 163, 0.2);
-      color: var(--pink);
-    }
-
-    .certs-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .cert-tag {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 79, 163, 0.15);
-      border-radius: 30px;
-      padding: 4px 10px;
-      font-size: 10px;
-      color: var(--muted);
-      transition: 0.2s;
-    }
-
-    .cert-tag:hover {
-      border-color: var(--pink);
-      color: var(--pink);
-    }
-
-    .academico-item {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 10px;
-      font-size: 11px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .academico-ano {
-      min-width: 75px;
-      font-weight: 600;
-      color: var(--pink2);
-    }
-
-    .resumo-card p {
-      font-size: 12px;
-      line-height: 1.6;
-      color: var(--muted);
-      margin: 0;
-    }
+    .curriculo-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .item-year { min-width: 90px; font-size: 11px; font-weight: 600; color: var(--pink2); line-height: 1.4; }
+    .curriculo-item strong { display: block; font-size: 13px; margin-bottom: 3px; color: var(--text); }
+    .item-place { display: block; font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+    .item-desc { display: block; font-size: 10px; color: #9a9a9a; line-height: 1.5; }
+    .competencias-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .competencia-item { background: rgba(255, 79, 163, 0.08); border-radius: 8px; padding: 6px 10px; font-size: 11px; color: var(--text); transition: 0.2s; }
+    .competencia-item:hover { background: rgba(255, 79, 163, 0.2); color: var(--pink); }
+    .certs-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+    .cert-tag { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 79, 163, 0.15); border-radius: 30px; padding: 4px 10px; font-size: 10px; color: var(--muted); transition: 0.2s; }
+    .cert-tag:hover { border-color: var(--pink); color: var(--pink); }
+    .academico-item { display: flex; gap: 12px; margin-bottom: 10px; font-size: 11px; color: var(--muted); line-height: 1.5; }
+    .academico-ano { min-width: 75px; font-weight: 600; color: var(--pink2); }
+    .resumo-card p { font-size: 12px; line-height: 1.6; color: var(--muted); margin: 0; }
 
     /* Podcast */
     .podcast {
@@ -494,7 +483,6 @@
       color: var(--muted);
       margin-bottom: 32px;
     }
-
     .canais-grid {
       display: flex;
       flex-wrap: wrap;
@@ -511,10 +499,7 @@
       transition: 0.3s;
       text-align: center;
     }
-    .canal-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--pink);
-    }
+    .canal-card:hover { transform: translateY(-4px); border-color: var(--pink); }
     .canal-card .emoji { font-size: 32px; margin-bottom: 12px; display: block; }
     .canal-card h4 { font-size: 16px; margin-bottom: 8px; color: var(--pink); }
     .canal-card p { font-size: 12px; color: var(--muted); }
@@ -538,39 +523,48 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
-    .footer-links a {
-      font-size: 12px;
-      color: var(--muted);
-      display: block;
-      margin-bottom: 6px;
-    }
+    .footer-links a { font-size: 12px; color: var(--muted); display: block; margin-bottom: 6px; }
     .footer-links a:hover { color: var(--pink); }
-    .footer-bottom {
-      text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 11px;
+    .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+
+    /* Botão flutuante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 1001;
+      background-color: #25D366;
+      border-radius: 50px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: 0.2s;
+      backdrop-filter: blur(2px);
+      border: none;
+    }
+    .whatsapp-float:hover { transform: scale(1.05); background-color: #20b859; }
+    @media (max-width: 680px) {
+      .whatsapp-float { padding: 8px 14px; font-size: 12px; bottom: 16px; left: 16px; }
+      .theme-toggle { bottom: 16px; right: 16px; }
     }
 
-    /* ========== RESPONSIVIDADE COMPLETA ========== */
-    
-    /* Desktop Médio (1024px - 1280px) */
+    /* Responsividade */
     @media (max-width: 1100px) {
       .container { padding: 0 28px; }
       .hero h1, .hero h1 .linha1, .hero h1 .linha2 { font-size: 60px; }
       .section-title h2, .contato-principal h2 { font-size: 40px; }
     }
-
-    /* Tablet (768px - 1024px) */
     @media (max-width: 1024px) {
       .hero h1, .hero h1 .linha1, .hero h1 .linha2 { font-size: 52px; }
       .section-title h2, .contato-principal h2 { font-size: 38px; }
       .manifesto-box { padding: 40px; }
       .manifesto-box h3 { font-size: 32px; }
     }
-
-    /* Tablet Pequeno (680px - 880px) */
     @media (max-width: 880px) {
       .hero-grid, .podcast-grid { grid-template-columns: 1fr; }
       .hero h1, .hero h1 .linha1, .hero h1 .linha2 { font-size: 48px; text-align: center; }
@@ -585,53 +579,10 @@
       .canal-card { width: 100%; max-width: 300px; }
       .hero-image img { max-width: 80%; margin: 0 auto; }
     }
-
-    /* Mobile Grande (480px - 680px) */
     @media (max-width: 680px) {
       .container { padding: 0 20px; }
       .hero h1, .hero h1 .linha1, .hero h1 .linha2 { font-size: 40px; }
       .section-title h2, .contato-principal h2 { font-size: 32px; }
-      .hero p { font-size: 14px; }
-      .btn, .btn-secondary { padding: 10px 16px; font-size: 13px; }
-      .tag { font-size: 10px; padding: 6px 12px; }
-      .manifesto-box { padding: 24px; }
-      .manifesto-box h3 { font-size: 26px; }
-      .manifesto-box p { font-size: 14px; }
-      .card h3 { font-size: 16px; }
-      .card p { font-size: 12px; }
-      .card { padding: 18px; }
-    }
-
-    /* Mobile Pequeno (320px - 480px) */
-    @media (max-width: 480px) {
-      .hero h1, .hero h1 .linha1, .hero h1 .linha2 { font-size: 32px; }
-      .section-title h2, .contato-principal h2 { font-size: 28px; }
-      .curriculo-card { padding: 14px 16px; }
-      .item-year { min-width: 70px; font-size: 10px; }
-      .competencias-grid { grid-template-columns: 1fr; }
-      .hero-image .overlay-tag { font-size: 8px; padding: 4px 10px; white-space: nowrap; bottom: 12px; }
-      .theme-toggle { bottom: 16px; right: 16px; padding: 6px 12px; }
-      .theme-option { padding: 2px 6px; font-size: 12px; }
-      section, .curriculo-section, .contato-principal { padding: 40px 0; }
-      .contato-principal .sub { font-size: 14px; }
-      .canal-card { padding: 16px 20px; min-width: auto; }
-      .canal-card .emoji { font-size: 28px; }
-      .canal-card h4 { font-size: 14px; }
-      .footer-links { grid-template-columns: 1fr; gap: 16px; }
-      .footer-grid { gap: 24px; }
-      .logo { font-size: 16px; }
-      .nav-wrapper { height: 60px; }
-    }
-
-    /* iPhone SE e similares (375px) */
-    @media (max-width: 375px) {
-      .hero h1, .hero h1 .linha1, .hero h1 .linha2 { font-size: 28px; }
-      .btn, .btn-secondary { padding: 8px 14px; font-size: 12px; }
-      .hero-buttons { gap: 10px; }
-    }
-
-    /* Menu Mobile (para dispositivos muito pequenos, adicionar menu hambúrguer) */
-    @media (max-width: 680px) {
       .nav-links {
         position: fixed;
         top: 70px;
@@ -646,16 +597,23 @@
         transition: 0.3s ease;
         z-index: 998;
       }
-      .nav-links.active {
-        left: 0;
-      }
-      .menu-mobile {
-        display: block;
-      }
+      .nav-links.active { left: 0; }
+      .menu-mobile { display: block; }
+      .subareas-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero h1, .hero h1 .linha1, .hero h1 .linha2 { font-size: 32px; }
+      .section-title h2, .contato-principal h2 { font-size: 28px; }
+      .hero-image .overlay-tag { font-size: 8px; padding: 4px 10px; white-space: nowrap; bottom: 12px; }
     }
   </style>
 </head>
 <body>
+
+<!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/5531991528642?text=Ol%C3%A1%20Lucas,%20preciso%20de%20ajuda%20jur%C3%ADdica!" target="_blank" class="whatsapp-float">
+  💬 Fale comigo no WhatsApp
+</a>
 
 <!-- Botão de tema claro/escuro -->
 <div class="theme-toggle">
@@ -681,15 +639,18 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="tag">⚖ Direito Público • Criminal • Democracia</div>
+      <div class="tag">⚖ Direito Público • Democracia</div>
       <h1>
-        <span class="linha1">Direito com</span>
-        <span class="linha2">propósito.</span>
+        <span class="linha1">Direito</span>
+        <span class="linha2">com propósito.</span>
       </h1>
-      <p>Justiça que informa. Conhecimento que transforma.<br>Advogado criminal e administrativo. MBA em Gestão Pública. Podcast Xicrinha.</p>
+      <p>Justiça que informa. Conhecimento que transforma.<br>Advogado. MBA em Gestão Pública. Podcast Xicrinha.</p>
       <div class="hero-buttons">
         <a href="https://wa.me/5531991528642" target="_blank" class="btn">💬 Me chame no WhatsApp</a>
         <a href="#podcast" class="btn-secondary">🎙 Ouvir podcast</a>
+      </div>
+      <div class="contact-info">
+        📞 Lucas Monteiro Mendes • (31) 99152-8642
       </div>
     </div>
     <div class="hero-image">
@@ -708,23 +669,89 @@
     </div>
     <div class="manifesto-box">
       <h3>Direito que conecta. Conhecimento que transforma.</h3>
-      <p>O Direito não deve existir apenas para quem domina a linguagem técnica. Minha trajetória conecta justiça criminal, gestão pública e comunicação estratégica. Atuei na 2ª Vara Criminal de Betim, processos de violência doméstica, assessoria institucional e licitações públicas. Mais do que teses, construo pontes entre conhecimento jurídico, impacto social e transformação coletiva.</p>
+      <p>O Direito não deve existir apenas para quem domina a linguagem técnica. Minha trajetória conecta gestão pública e comunicação estratégica. Atuei na 2ª Vara Criminal de Betim, processos de violência doméstica, assessoria institucional e licitações públicas. Mais do que teses, construo pontes entre conhecimento jurídico, impacto social e transformação coletiva.</p>
     </div>
   </div>
 </section>
 
-<!-- ATUAÇÃO -->
+<!-- ATUAÇÃO COM FILTRO -->
 <section id="atuacao">
   <div class="container">
     <div class="section-title">
-      <span>Atuação</span>
+      <span>Áreas de atuação</span>
       <h2>Estratégia jurídica com visão institucional e impacto público.</h2>
+      <p>Clique em uma área abaixo para ver suas especificidades</p>
     </div>
-    <div class="cards">
-      <div class="card"><h3>Direito Administrativo</h3><p>Licitações (Lei 14.133/2021), contratos, concessões e PPPs.</p></div>
-      <div class="card"><h3>Direito Constitucional</h3><p>Análise de constitucionalidade, controle de normas e direitos fundamentais.</p></div>
-      <div class="card"><h3>Direito Criminal</h3><p>Processos criminais, réus presos/soltos, violência doméstica.</p></div>
-      <div class="card"><h3>Controle & Transparência</h3><p>Controle externo, acesso à informação, integridade pública.</p></div>
+    
+    <div class="cards" id="cardsAtuacao">
+      <div class="card" data-categoria="administrativo">
+        <h3>Direito Administrativo</h3>
+        <p>Licitações (Lei 14.133/2021), contratos administrativos, concessões, parcerias público-privadas, saneamento de irregularidades e consultoria estratégica para órgãos públicos e empresas.</p>
+        <small>🔍 Clique para ver as especificidades</small>
+      </div>
+      <div class="card" data-categoria="constitucional">
+        <h3>Direito Constitucional</h3>
+        <p>Análise de constitucionalidade de leis e atos normativos, controle de constitucionalidade, defesa de direitos fundamentais, mandados de segurança e ações constitucionais.</p>
+        <small>🔍 Clique para ver as especificidades</small>
+      </div>
+      <div class="card" data-categoria="criminal">
+        <h3>Direito Criminal</h3>
+        <p>Processos criminais em todas as fases, defesa de réus presos ou soltos, violência doméstica, crimes de trânsito, Lei de Drogas, crimes cibernéticos, habeas corpus e recursos.</p>
+        <small>🔍 Clique para ver as especificidades</small>
+      </div>
+      <div class="card" data-categoria="controle">
+        <h3>Controle & Transparência</h3>
+        <p>Controle externo e interno, compliance público, ouvidorias, acesso à informação (LAI), integridade pública, prevenção à corrupção e governança pública.</p>
+        <small>🔍 Clique para ver as especificidades</small>
+      </div>
+    </div>
+
+    <div class="subareas-titulo" id="subareasTitulo">Especificidades por área</div>
+    <div class="subareas-subtitulo" id="subareasSubtitulo">Clique em uma área acima para ver os detalhes</div>
+    
+    <div class="subareas-grid" id="subareasGrid">
+      <!-- Direito Administrativo -->
+      <div class="subarea-item" data-area="administrativo">Licitações e Contratos (Lei 14.133/2021)</div>
+      <div class="subarea-item" data-area="administrativo">Concessões e Parcerias Público-Privadas</div>
+      <div class="subarea-item" data-area="administrativo">Saneamento de Irregularidades</div>
+      <div class="subarea-item" data-area="administrativo">Consultoria Estratégica para Órgãos Públicos</div>
+      <div class="subarea-item" data-area="administrativo">Processo Administrativo Disciplinar (PAD)</div>
+      <div class="subarea-item" data-area="administrativo">Responsabilidade Civil do Estado</div>
+      <div class="subarea-item" data-area="administrativo">Improbidade Administrativa</div>
+      <div class="subarea-item" data-area="administrativo">Serviços Públicos e Regulação</div>
+      
+      <!-- Direito Constitucional -->
+      <div class="subarea-item" data-area="constitucional">Controle de Constitucionalidade</div>
+      <div class="subarea-item" data-area="constitucional">Mandado de Segurança</div>
+      <div class="subarea-item" data-area="constitucional">Ação Direta de Inconstitucionalidade (ADI)</div>
+      <div class="subarea-item" data-area="constitucional">Arguição de Descumprimento de Preceito Fundamental (ADPF)</div>
+      <div class="subarea-item" data-area="constitucional">Defesa de Direitos Fundamentais</div>
+      <div class="subarea-item" data-area="constitucional">Ação Civil Pública</div>
+      <div class="subarea-item" data-area="constitucional">Direitos Difusos e Coletivos</div>
+      
+      <!-- Direito Criminal -->
+      <div class="subarea-item" data-area="criminal">Prisão em Flagrante, Audiência de Custódia e Liberdade Provisória</div>
+      <div class="subarea-item" data-area="criminal">Habeas Corpus e Recursos aos Tribunais Superiores</div>
+      <div class="subarea-item" data-area="criminal">Inquéritos Policiais e Ações Penais</div>
+      <div class="subarea-item" data-area="criminal">Tribunal do Júri e Execução Penal</div>
+      <div class="subarea-item" data-area="criminal">Crimes de Trânsito e Lei de Drogas</div>
+      <div class="subarea-item" data-area="criminal">Lei Maria da Penha e Violência Doméstica</div>
+      <div class="subarea-item" data-area="criminal">Crimes Cibernéticos e Crimes contra a Honra</div>
+      <div class="subarea-item" data-area="criminal">Crimes contra o Patrimônio e o Sistema Nacional de Armas</div>
+      <div class="subarea-item" data-area="criminal">Crimes contra a Dignidade Sexual</div>
+      <div class="subarea-item" data-area="criminal">Colaboração Premiada e Acordo de Não Persecução Penal (ANPP)</div>
+      
+      <!-- Controle & Transparência -->
+      <div class="subarea-item" data-area="controle">Controle Externo (Tribunais de Contas)</div>
+      <div class="subarea-item" data-area="controle">Controle Interno</div>
+      <div class="subarea-item" data-area="controle">Compliance Público</div>
+      <div class="subarea-item" data-area="controle">Ouvidorias Públicas</div>
+      <div class="subarea-item" data-area="controle">Acesso à Informação (LAI)</div>
+      <div class="subarea-item" data-area="controle">Integridade Pública</div>
+      <div class="subarea-item" data-area="controle">Prevenção à Corrupção</div>
+      <div class="subarea-item" data-area="controle">Governança Pública</div>
+      <div class="subarea-item" data-area="controle">Programas de Integridade</div>
+      <div class="subarea-item" data-area="controle">Código de Conduta</div>
     </div>
   </div>
 </section>
@@ -735,124 +762,37 @@
     <div class="section-title">
       <span>Trajetória</span>
       <h2>Currículo profissional</h2>
-      <p>Advogado OAB/MG 207.091 • Especialista em Gestão Pública (MBA)</p>
+      <p>Advogado OAB/MG 207.091 • MBA em Gestão Pública</p>
     </div>
-
     <div class="curriculo-grid">
-      
       <div class="curriculo-col">
-        <div class="curriculo-card">
-          <div class="card-header">🎓 FORMAÇÃO ACADÊMICA</div>
-          <div class="curriculo-item">
-            <span class="item-year">2022</span>
-            <div>
-              <strong>Pós-graduação em Direito Tributário</strong>
-              <span class="item-place">Damásio / Ibmec-SP</span>
-            </div>
-          </div>
-          <div class="curriculo-item">
-            <span class="item-year">2021</span>
-            <div>
-              <strong>MBA em Gestão Pública</strong>
-              <span class="item-place">Pitágoras Unopar</span>
-            </div>
-          </div>
-          <div class="curriculo-item">
-            <span class="item-year">2019</span>
-            <div>
-              <strong>Bacharelado em Direito</strong>
-              <span class="item-place">Centro Universitário UNA</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="curriculo-card">
-          <div class="card-header">💼 EXPERIÊNCIA PROFISSIONAL</div>
-          <div class="curriculo-item">
-            <span class="item-year">2024 → Atual</span>
-            <div>
-              <strong>Advocacia Privada</strong>
-              <span class="item-place">Advogado Autônomo / Sócio-Administrador</span>
-              <span class="item-desc">Atendimento direto, pareceres, peças jurídicas e relatórios técnicos.</span>
-            </div>
-          </div>
-          <div class="curriculo-item">
-            <span class="item-year">Set/2025 → Dez/2025</span>
-            <div>
-              <strong>Secretaria de Compras e Licitações</strong>
-              <span class="item-place">Município de Betim | Assessor RAA 18</span>
-              <span class="item-desc">Assessoramento à alta gestão, apoio a contratações públicas (Lei 14.133/2021).</span>
-            </div>
-          </div>
-          <div class="curriculo-item">
-            <span class="item-year">Set/2022 → Jun/2024</span>
-            <div>
-              <strong>PlanSul (2ª Vara Criminal)</strong>
-              <span class="item-place">Consultor Jurídico</span>
-              <span class="item-desc">Análise de processos criminais e violência doméstica.</span>
-            </div>
-          </div>
-          <div class="curriculo-item">
-            <span class="item-year">Set/2021 → Nov/2022</span>
-            <div>
-              <strong>Supervisor de Gabinete I</strong>
-              <span class="item-place">Prefeitura de Betim</span>
-              <span class="item-desc">Coordenação administrativa com KPIs e relatórios gerenciais.</span>
-            </div>
-          </div>
-          <div class="curriculo-item">
-            <span class="item-year">Jan/2018 → Dez/2019</span>
-            <div>
-              <strong>Estagiário de Graduação</strong>
-              <span class="item-place">TJMG - 2ª Vara Criminal de Betim</span>
-              <span class="item-desc">Atendimento ao público vulnerável e apoio processual.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="curriculo-col">
-        <div class="curriculo-card">
-          <div class="card-header">⚙️ COMPETÊNCIAS</div>
-          <div class="competencias-grid">
-            <div class="competencia-item">📊 Relatórios técnicos</div>
-            <div class="competencia-item">📈 Excel / KPIs / Jurimetria</div>
-            <div class="competencia-item">🧠 Inteligência emocional</div>
-            <div class="competencia-item">🌱 ESG e direitos humanos</div>
-            <div class="competencia-item">📝 Pareceres estratégicos</div>
-            <div class="competencia-item">🎯 Gestão de projetos</div>
-          </div>
-        </div>
-
-        <div class="curriculo-card">
-          <div class="card-header">📜 CERTIFICAÇÕES & CURSOS</div>
-          <div class="certs-grid">
-            <span class="cert-tag">Gestão de Gabinete – PUCRS</span>
-            <span class="cert-tag">Argumentação Jurídica – FGV</span>
-            <span class="cert-tag">Inteligência Emocional – Conquer</span>
-            <span class="cert-tag">MS Excel – Fundação Bradesco</span>
-            <span class="cert-tag">Direito Constitucional – ILB</span>
-          </div>
-        </div>
-
-        <div class="curriculo-card">
-          <div class="card-header">📄 PRODUÇÃO ACADÊMICA</div>
-          <div class="academico-item">
-            <span class="academico-ano">2012</span>
-            <span>Inclusão de Egressos do Sistema Penitenciário</span>
-          </div>
-          <div class="academico-item">
-            <span class="academico-ano">2017-2018</span>
-            <span>Iniciação Científica: "Apenas negócios?" – ONU e Direitos Humanos</span>
-          </div>
-        </div>
-
+        <!-- RESUMO -->
         <div class="curriculo-card resumo-card">
           <div class="card-header">📌 RESUMO</div>
           <p>Advogado com sólida experiência nas esferas criminal e administrativa, com atuação no sistema de justiça e na gestão pública. Experiência na 2ª Vara Criminal de Betim e atendimento direto ao público. MBA em Gestão Pública.</p>
         </div>
+        <!-- FORMAÇÃO ACADÊMICA -->
+        <div class="curriculo-card">
+          <div class="card-header">🎓 FORMAÇÃO ACADÊMICA</div>
+          <div class="curriculo-item"><span class="item-year">2022</span><div><strong>Pós-graduação em Direito Tributário</strong><span class="item-place">Damásio / Ibmec-SP</span></div></div>
+          <div class="curriculo-item"><span class="item-year">2021</span><div><strong>MBA em Gestão Pública</strong><span class="item-place">Pitágoras Unopar</span></div></div>
+          <div class="curriculo-item"><span class="item-year">2019</span><div><strong>Bacharelado em Direito</strong><span class="item-place">Centro Universitário UNA</span></div></div>
+        </div>
+        <!-- EXPERIÊNCIA PROFISSIONAL ATUALIZADA -->
+        <div class="curriculo-card">
+          <div class="card-header">💼 EXPERIÊNCIA PROFISSIONAL</div>
+          <div class="curriculo-item"><span class="item-year">2024 → Atual</span><div><strong>Advocacia Privada</strong><span class="item-place">Advogado Autônomo</span><span class="item-desc">Atendimento direto, pareceres, peças jurídicas e relatórios técnicos.</span></div></div>
+          <div class="curriculo-item"><span class="item-year">Set/2025 → Dez/2025</span><div><strong>MGS - Minas Gerais Administração e Serviços S.A.</strong><span class="item-place">Terceirizado - Município de Betim (Secretaria de Compras e Licitações) | Assessor RAA 18</span><span class="item-desc">Assessoramento à alta gestão, apoio a contratações públicas (Lei 14.133/2021).</span></div></div>
+          <div class="curriculo-item"><span class="item-year">Set/2022 → Jun/2024</span><div><strong>PlanSul - Planejamento e Consultoria Ltda</strong><span class="item-place">Terceirizado - TJMG (2ª Vara Criminal da Comarca de Betim) | Consultor Jurídico</span><span class="item-desc">Análise de processos criminais e violência doméstica.</span></div></div>
+          <div class="curriculo-item"><span class="item-year">Set/2021 → Nov/2022</span><div><strong>Município de Betim</strong><span class="item-place">Comissionado - Secretaria Adjunta de Administração | Supervisor de Gabinete I</span><span class="item-desc">Coordenação administrativa com KPIs e relatórios gerenciais.</span></div></div>
+          <div class="curriculo-item"><span class="item-year">Jan/2018 → Dez/2019</span><div><strong>TJMG - Tribunal de Justiça do Estado de Minas Gerais</strong><span class="item-place">Temporário - 2ª Vara Criminal de Betim | Estagiário de Graduação</span><span class="item-desc">Atendimento ao público vulnerável e apoio processual.</span></div></div>
+        </div>
       </div>
-
+      <div class="curriculo-col">
+        <div class="curriculo-card"><div class="card-header">⚙️ COMPETÊNCIAS</div><div class="competencias-grid"><div class="competencia-item">📊 Relatórios técnicos</div><div class="competencia-item">📈 Excel / KPIs / Jurimetria</div><div class="competencia-item">🧠 Inteligência emocional</div><div class="competencia-item">🌱 ESG e direitos humanos</div><div class="competencia-item">📝 Pareceres estratégicos</div><div class="competencia-item">🎯 Gestão de projetos</div></div></div>
+        <div class="curriculo-card"><div class="card-header">📜 CERTIFICAÇÕES & CURSOS</div><div class="certs-grid"><span class="cert-tag">Gestão de Gabinete – PUCRS</span><span class="cert-tag">Argumentação Jurídica – FGV</span><span class="cert-tag">Inteligência Emocional – Conquer</span><span class="cert-tag">MS Excel – Fundação Bradesco</span><span class="cert-tag">Direito Constitucional – ILB</span></div></div>
+        <div class="curriculo-card"><div class="card-header">📄 PRODUÇÃO ACADÊMICA</div><div class="academico-item"><span class="academico-ano">2012</span><span>Inclusão de Egressos do Sistema Penitenciário</span></div><div class="academico-item"><span class="academico-ano">2017-2018</span><span>Iniciação Científica: "Apenas negócios?" – ONU e Direitos Humanos</span></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -860,170 +800,112 @@
 <!-- PODCAST -->
 <section class="podcast" id="podcast">
   <div class="container podcast-grid">
-    <div class="podcast-image">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgupWdfjLftEEJGiGD53aFjh7FEAa_vhBqeKfHguMWjPmIVwGVH1SdWA88dIA2WjJprObt3YkjgFH2auMJNixOW6ZTposuFhaobWh-WubXlOHOPkY1I8wWiYo0wc6baQkGs0iX5LE6g1TunwKnFjjcabmMCUfQETcSH9yXf9Ps85tnxxcPvFjIDjYOUM6wG/s1600/New%20Project.png" alt="Podcast Xicrinha" width="560" height="560">
-    </div>
-    <div>
-      <div class="section-title">
-        <span>NO AR • ON AIR</span>
-        <h2>XICRINHA COM DIREITO — <span style="color:var(--pink)">conhecer é poder!</span></h2>
-      </div>
-      <div class="episodes">
-        <div class="episode"><small>EP #01</small><h4>O Direito precisa ser acessível?</h4><p>A linguagem técnica e as instituições públicas.</p></div>
-        <div class="episode"><small>EP #02</small><h4>IA, advocacia e transformação digital</h4><p>Impacto da inteligência artificial na advocacia.</p></div>
-        <div class="episode"><small>EP #03</small><h4>Democracia, comunicação e poder</h4><p>Informação pública na construção democrática.</p></div>
-      </div>
+    <div class="podcast-image"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgupWdfjLftEEJGiGD53aFjh7FEAa_vhBqeKfHguMWjPmIVwGVH1SdWA88dIA2WjJprObt3YkjgFH2auMJNixOW6ZTposuFhaobWh-WubXlOHOPkY1I8wWiYo0wc6baQkGs0iX5LE6g1TunwKnFjjcabmMCUfQETcSH9yXf9Ps85tnxxcPvFjIDjYOUM6wG/s1600/New%20Project.png" alt="Podcast Xicrinha" width="560" height="560"></div>
+    <div><div class="section-title"><span>NO AR • ON AIR</span><h2>XICRINHA COM DIREITO — <span style="color:var(--pink)">conhecer é poder!</span></h2></div><div class="episodes"><div class="episode"><small>EP #01</small><h4>O Direito precisa ser acessível?</h4><p>A linguagem técnica e as instituições públicas.</p></div><div class="episode"><small>EP #02</small><h4>IA, advocacia e transformação digital</h4><p>Impacto da inteligência artificial na advocacia.</p></div><div class="episode"><small>EP #03</small><h4>Democracia, comunicação e poder</h4><p>Informação pública na construção democrática.</p></div></div></div>
+  </div>
+</section>
+
+<!-- LINKS ÚTEIS -->
+<section style="padding: 40px 0; background: var(--bg);">
+  <div class="container">
+    <div class="section-title"><span>Transparência & Cidadania</span><h2>Links úteis — Câmara Municipal de Betim</h2><p>Acesso direto a informações, ouvidoria, legislação e memória institucional</p></div>
+    <div class="links-uteis-grid">
+      <div class="link-card"><a href="https://legislativo.camarabetim.mg.gov.br/" target="_blank" rel="noopener">📜 Legislação Municipal</a></div>
+      <div class="link-card"><a href="https://www.camarabetim.mg.gov.br/Ouvidoria/Index" target="_blank" rel="noopener">🗣️ Ouvidoria</a></div>
+      <div class="link-card"><a href="https://www.camarabetim.mg.gov.br/Escola%20do%20Legislativo/Index" target="_blank" rel="noopener">📚 Escola do Legislativo</a></div>
+      <div class="link-card"><a href="https://www.camarabetim.mg.gov.br/Transpar%C3%AAncia/Index" target="_blank" rel="noopener">🔍 Portal da Transparência</a></div>
+      <div class="link-card"><a href="https://www.camarabetim.mg.gov.br/CIAC/Index" target="_blank" rel="noopener">📋 CIAC - Central de Atendimento</a></div>
+      <div class="link-card"><a href="https://www.camarabetim.mg.gov.br/Mem%C3%B3ria%20Institucional/Index" target="_blank" rel="noopener">🏛️ Memória Institucional</a></div>
     </div>
   </div>
 </section>
 
 <!-- CONTATO PRINCIPAL -->
 <section class="contato-principal" id="contato-principal">
-  <div class="container">
-    <h2>Vamos descomplicar o que parece impossível.</h2>
-    <div class="sub">Conecte-se comigo</div>
-    
-    <div class="canais-grid">
-      <div class="canal-card">
-        <span class="emoji">📸</span>
-        <h4>Instagram</h4>
-        <p>@llucas.monteiro</p>
-        <a href="https://www.instagram.com/llucas.monteiro/" target="_blank">Seguir →</a>
-      </div>
-      <div class="canal-card">
-        <span class="emoji">🧵</span>
-        <h4>Threads</h4>
-        <p>@llucas.monteiro</p>
-        <a href="https://www.threads.com/@llucas.monteiro" target="_blank">Seguir →</a>
-      </div>
-      <div class="canal-card">
-        <span class="emoji">📘</span>
-        <h4>Facebook</h4>
-        <p>/llucasmonteiroadv</p>
-        <a href="https://www.facebook.com/llucasmonteiroadv" target="_blank">Visitar →</a>
-      </div>
-      <div class="canal-card">
-        <span class="emoji">📬</span>
-        <h4>E-mail</h4>
-        <p>Gmail</p>
-        <a href="mailto:lucasmonteiromendes@gmail.com">lucasmonteiromendes@gmail.com</a>
-      </div>
-      <div class="canal-card">
-        <span class="emoji">📫</span>
-        <h4>E-mail</h4>
-        <p>Outlook</p>
-        <a href="mailto:lucasmonteiromendes@outlook.com">lucasmonteiromendes@outlook.com</a>
-      </div>
-      <div class="canal-card">
-        <span class="emoji">💚</span>
-        <h4>WhatsApp</h4>
-        <p>Clique e fale comigo</p>
-        <a href="https://wa.me/5531991528642" target="_blank">(31) 99152-8642 →</a>
-      </div>
-    </div>
-  </div>
+  <div class="container"><h2>Vamos descomplicar o que parece impossível.</h2><div class="sub">Conecte-se comigo</div><div class="canais-grid"><div class="canal-card"><span class="emoji">📸</span><h4>Instagram</h4><p>@llucas.monteiro</p><a href="https://www.instagram.com/llucas.monteiro/" target="_blank">Seguir →</a></div><div class="canal-card"><span class="emoji">🧵</span><h4>Threads</h4><p>@llucas.monteiro</p><a href="https://www.threads.com/@llucas.monteiro" target="_blank">Seguir →</a></div><div class="canal-card"><span class="emoji">📘</span><h4>Facebook</h4><p>/llucasmonteiroadv</p><a href="https://www.facebook.com/llucasmonteiroadv" target="_blank">Visitar →</a></div><div class="canal-card"><span class="emoji">📬</span><h4>E-mail</h4><p>Gmail / Outlook</p><a href="mailto:lucasmonteiromendes@gmail.com">lucasmonteiromendes@gmail.com</a><br><a href="mailto:lucasmonteiromendes@outlook.com" style="margin-top:5px;">lucasmonteiromendes@outlook.com</a></div><div class="canal-card"><span class="emoji">💚</span><h4>WhatsApp</h4><p>Clique e fale comigo</p><a href="https://wa.me/5531991528642" target="_blank">(31) 99152-8642 →</a></div></div></div>
 </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Lucas<span>.</span></div>
-        <p style="margin-top:12px; color:var(--muted); font-size:12px;">Democratizar conhecimento é fortalecer cidadania.</p>
-      </div>
-      <div class="footer-links">
-        <div>
-          <h4 style="font-size:12px; margin-bottom:10px;">Conteúdo</h4>
-          <a href="#podcast">Podcast</a>
-          <a href="#curriculo">Currículo</a>
-        </div>
-        <div>
-          <h4 style="font-size:12px; margin-bottom:10px;">Institucional</h4>
-          <a href="#manifesto">Sobre</a>
-          <a href="#atuacao">Atuação</a>
-          <a href="#contato-principal">Contato</a>
-        </div>
-        <div>
-          <h4 style="font-size:12px; margin-bottom:10px;">Atendimento</h4>
-          <span style="font-size:11px; color:var(--muted);">BH e Região Metropolitana</span>
-        </div>
-        <div>
-          <h4 style="font-size:12px; margin-bottom:10px;">OAB/MG</h4>
-          <span style="font-size:11px; color:var(--muted);">207.091</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Lucas Monteiro Mendes. Todos os direitos reservados.</p>
-    </div>
-  </div>
-</footer>
+<footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">Lucas<span>.</span></div><p style="margin-top:12px; color:var(--muted); font-size:12px;">Democratizar conhecimento é fortalecer cidadania.</p></div><div class="footer-links"><div><h4 style="font-size:12px; margin-bottom:10px;">Conteúdo</h4><a href="#podcast">Podcast</a><a href="#curriculo">Currículo</a></div><div><h4 style="font-size:12px; margin-bottom:10px;">Institucional</h4><a href="#manifesto">Sobre</a><a href="#atuacao">Atuação</a><a href="#contato-principal">Contato</a></div><div><h4 style="font-size:12px; margin-bottom:10px;">Atendimento</h4><span style="font-size:11px; color:var(--muted);">BH e Região Metropolitana</span></div><div><h4 style="font-size:12px; margin-bottom:10px;">OAB/MG</h4><span style="font-size:11px; color:var(--muted);">207.091</span></div></div></div><div class="footer-bottom"><p>© 2026 Lucas Monteiro Mendes. Todos os direitos reservados.</p></div></div></footer>
 
 <script>
   // Tema claro/escuro
   const themeOptions = document.querySelectorAll('.theme-option');
   const body = document.body;
-
   const savedTheme = localStorage.getItem('theme') || 'dark';
   body.classList.toggle('light', savedTheme === 'light');
+  function updateActiveTheme(theme) { themeOptions.forEach(opt => { const t = opt.getAttribute('data-theme'); if (t === theme) opt.classList.add('active'); else opt.classList.remove('active'); }); }
   updateActiveTheme(savedTheme);
-
-  themeOptions.forEach(option => {
-    option.addEventListener('click', () => {
-      const theme = option.getAttribute('data-theme');
-      if (theme === 'light') {
-        body.classList.add('light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        body.classList.remove('light');
-        localStorage.setItem('theme', 'dark');
-      }
-      updateActiveTheme(theme);
-    });
-  });
-
-  function updateActiveTheme(theme) {
-    themeOptions.forEach(opt => {
-      const optTheme = opt.getAttribute('data-theme');
-      if (optTheme === theme) {
-        opt.classList.add('active');
-      } else {
-        opt.classList.remove('active');
-      }
-    });
-  }
-
+  themeOptions.forEach(option => { option.addEventListener('click', () => { const theme = option.getAttribute('data-theme'); if (theme === 'light') { body.classList.add('light'); localStorage.setItem('theme', 'light'); } else { body.classList.remove('light'); localStorage.setItem('theme', 'dark'); } updateActiveTheme(theme); }); });
+  
   // Menu mobile
   const menuMobile = document.getElementById('menuMobile');
   const navLinks = document.getElementById('navLinks');
+  if (menuMobile) menuMobile.addEventListener('click', () => navLinks.classList.toggle('active'));
+  document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
+  
+  // Scroll suave
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { const href = this.getAttribute('href'); if (href === '#') return; const target = document.querySelector(href); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); navLinks.classList.remove('active'); } }); });
 
-  if (menuMobile) {
-    menuMobile.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+  // FUNÇÃO PARA ENVIAR MENSAGEM AO WHATSAPP
+  const telefone = "5531991528642";
+  
+  function enviarWhatsApp(assunto, detalhes) {
+    const mensagem = `Olá Lucas! Gostaria de mais informações sobre: *${assunto}*%0A%0A*Detalhes:* ${detalhes}%0A%0APoderia me ajudar?`;
+    const url = `https://wa.me/${telefone}?text=${mensagem}`;
+    window.open(url, '_blank');
   }
 
-  // Fechar menu ao clicar em um link
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-    });
-  });
-
-  // Scroll suave
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        navLinks.classList.remove('active');
+  // CARDS DE ATUAÇÃO funcionam como FILTROS para as subáreas
+  const cardsAtuacao = document.querySelectorAll('#cardsAtuacao .card');
+  const subareasItems = document.querySelectorAll('#subareasGrid .subarea-item');
+  const subareasTitulo = document.getElementById('subareasTitulo');
+  const subareasSubtitulo = document.getElementById('subareasSubtitulo');
+  
+  const nomesAreas = {
+    'administrativo': 'Direito Administrativo',
+    'constitucional': 'Direito Constitucional',
+    'criminal': 'Direito Criminal',
+    'controle': 'Controle & Transparência'
+  };
+  
+  function filtrarSubareas(areaFiltro) {
+    let count = 0;
+    subareasItems.forEach(item => {
+      const areaItem = item.getAttribute('data-area');
+      if (areaFiltro === 'todos' || areaItem === areaFiltro) {
+        item.style.display = 'flex';
+        count++;
+      } else {
+        item.style.display = 'none';
       }
     });
+    return count;
+  }
+  
+  cardsAtuacao.forEach(card => {
+    card.addEventListener('click', () => {
+      const categoria = card.getAttribute('data-categoria');
+      const nomeArea = nomesAreas[categoria];
+      const totalExibidos = filtrarSubareas(categoria);
+      subareasTitulo.innerHTML = `Especificidades de ${nomeArea}`;
+      subareasSubtitulo.innerHTML = `${totalExibidos} itens - Clique em qualquer item para falar comigo`;
+      document.getElementById('subareasGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   });
+  
+  subareasItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const subareaNome = item.innerText.trim();
+      const areaPrincipal = item.getAttribute('data-area');
+      const nomeArea = nomesAreas[areaPrincipal] || 'Direito';
+      enviarWhatsApp(`${nomeArea} - ${subareaNome}`, `Gostaria de saber mais sobre esta especificidade jurídica.`);
+    });
+  });
+  
+  // Inicializar: mostrar Direito Administrativo como padrão
+  filtrarSubareas('administrativo');
+  subareasTitulo.innerHTML = `Especificidades de Direito Administrativo`;
+  subareasSubtitulo.innerHTML = `8 itens - Clique em qualquer item para falar comigo`;
 </script>
-
 </body>
 </html>
